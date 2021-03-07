@@ -1,0 +1,28 @@
+{
+  "name": "nextJs_pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuriDuque/nextJs_pokedex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuriDuque/nextJs_pokedex/issues"
+  },
+  "homepage": "https://github.com/yuriDuque/nextJs_pokedex#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "next": "^10.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
