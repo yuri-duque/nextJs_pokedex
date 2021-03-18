@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 
-export default function Home() {
+export async function getStaticProps() {
+    debugger;
+    const pokemons = await axios.get("https://pokeapi.co/api/v2/pokedex/2/")
+        .then((resp) => {
+            return resp.data.pokemon_entries;
+        });
+    debugger;
+    return {
+        props: {
+            pokemons
+        }
+    }
+}
 
-    const [pokemons, setPokemons] = useState([]);
-
-    useEffect(() => {
-        axios.get("https://pokeapi.co/api/v2/pokedex/2/").then((resp) => {
-            debugger
-            setPokemons(resp.data.pokemon_entries);
-        }).catch(() => {
-
-        })
-    }, []);
+export default function Home(props) {
+    const { pokemons } = props;
+    debugger;
 
     return (
         <div>
